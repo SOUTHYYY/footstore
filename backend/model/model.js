@@ -1,27 +1,26 @@
 const mongoose = require('mongoose')
 
-const SneakerSchema = mongoose.Schema({
+const ItemSchema = mongoose.Schema({
     name: {
         type: String,
-        required: true,
-    },
-    category: {
-        type: String,
         required: true
     },
-    description: String,
-    coloring: String,
+    description: {
+        type: String,
+        default: '',
+    },
     starting_price: {
         type: Number,
-        required: true
+        required: true,
     },
-    brands: {
+    brand: {
         type: String,
         required: true
     },
-    // images: [{
-    //     type: String,
-    // }]
+    date: {
+        type: Date,
+        default: Date.now()
+    },
 })
 
-module.exports = mongoose.model('Post', SneakerSchema)
+module.exports = mongoose.model('Item', ItemSchema)
