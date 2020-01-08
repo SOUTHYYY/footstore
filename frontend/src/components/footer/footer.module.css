@@ -1,0 +1,66 @@
+footer {
+  background-color: #000;
+  padding: 0 5%;
+}
+
+.footer__header {
+  margin-top: 100px; 
+  /* TODO: Убрать mb */
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.4);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.footer__header span {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.footer__section {
+  padding-top: 80px;
+}
+
+.footer__section_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.footer__section_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__section_content div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__section_item {
+  display: flex;
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 0.4);
+  letter-spacing: 0.5px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.footer__section_item:last-child{
+  justify-content: flex-end;
+}
+
+.footer__section_item:hover {
+  color: #fff;
+  transition: 0.2s;
+}
+
+.footer__footer {
+  padding-top: 100px;
+}
