@@ -18,7 +18,7 @@ const Item = ({ data }) => {
                         <div className={styles.item__desc_model}>{model}</div>
                         <div className={styles.item__desc_color}>{color}</div>
                     </div>
-                    <div className={styles.item__desc_price}>{price} р</div>
+                    <div className={styles.item__desc_price}>{price} ₽</div>
 
                 </div>
             </div>

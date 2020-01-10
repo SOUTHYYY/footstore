@@ -4,8 +4,6 @@ footer {
 }
 
 .footer__header {
-  margin-top: 100px; 
-  /* TODO: Убрать mb */
   display: flex;
   padding-top: 100px;
   padding-bottom: 80px;
