@@ -7,8 +7,8 @@
   width: 100%;
 }
 
-h1 {
-    margin-bottom: 100px;
+.login h1 {
+  margin-bottom: 100px;
 }
 
 .login form {
@@ -19,7 +19,6 @@ h1 {
 }
 
 .login__field_wrapper {
-
 }
 
 .login form div {
@@ -30,28 +29,26 @@ h1 {
   text-transform: uppercase;
 }
 .login form input {
-    width: calc(100% - 18px);
-    border: 1px solid #e5e5e5!important;
-    border-radius: 3px;
-    padding: 8px;
-    margin-bottom: 10px;
+  width: calc(100% - 18px);
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 10px;
 }
 
 .login form button {
-    padding: 17px 0 15px;
-    background-color: #0abab5;
-    font-size: 11px;
-    color: #fff;
-    letter-spacing: .33px;
-    border-radius: 3px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
+  padding: 17px 0 15px;
+  background-color: #0abab5;
+  font-size: 11px;
+  color: #fff;
+  letter-spacing: 0.33px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-
 .forgot_password {
-    margin-top: 20px;
-    border-bottom: 1px solid black;
-
+  margin-top: 20px;
+  border-bottom: 1px solid black;
 }
