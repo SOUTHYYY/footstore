@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './footer.module.css'
+import vk from '../../images/footer-images/vk.svg'
+import telegram from '../../images/footer-images/telegram.svg'
+import instagram from '../../images/footer-images/instagram.svg'
 
 const Footer = props => {
     return (
@@ -27,7 +30,17 @@ const Footer = props => {
                 </div>
             </div>
             <div className={styles.footer__footer}>
-                
+                <div className={styles.footer__footer_left}>
+                    <div>2019-2020 // "САВАСИ СТОР"</div>
+                    <div className={styles.footer__footer_images}>
+                        <img src={instagram} alt='link'></img>
+                        <img src={telegram} alt='link'></img>
+                        <img src={vk} alt='link'></img>
+                    </div>
+                </div>
+                <div className={styles.footer__footer_right}>
+
+                </div>
             </div>
         </footer>
     )
