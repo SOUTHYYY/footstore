@@ -22,8 +22,8 @@ app.use(function(req, res, next) {
 
 app.use(bodyParser.json())
 
-app.use('/auth', authRoute)
-app.use('/posts', postsRoute)
+app.use('/api/user', authRoute)
+app.use('/api/posts', postsRoute)
 
 
 mongoose.connect(
