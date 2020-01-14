@@ -17,6 +17,10 @@ const ItemSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    color: {
+        type: String,
+        require: true
+    },
     date: {
         type: Date,
         default: Date.now()
