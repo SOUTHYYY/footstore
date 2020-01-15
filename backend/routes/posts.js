@@ -13,13 +13,27 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/:itemId', async (req, res) => {
+    try {
+        const post = await Item.findById(req.params.itemId)
+        res.json(post).send(post)
+    } catch (err) {
+        res.json({ message: err })
+    }
+
+})
+
+
 // Submits a sneacker post 
 router.post('/', async (req, res) => {
     const post = new Item({
         name: req.body.name,
         description: req.body.description,
         starting_price: req.body.starting_price,
-        brand: req.body.brand
+        brand: req.body.brand,
+        images: req.body.images,
+        category: req.body.category,
+        color: req.body.color
     })
     try {
         const savedPost = await post.save()
@@ -28,18 +42,6 @@ router.post('/', async (req, res) => {
         res.json({ message: err })
     }
 })
-
-//Specific post
-
-// router.get('/:postId', async (req, res) => {
-//     console.log('postId Is:', req.params.postId)
-//     try {
-//         const post = await Item.findById(req.params.postId)
-//         res.json(post)
-//     } catch (err) {
-//         res.json({ message: err })
-//     }
-// })
 
 // Delete post
 // router.delete('/:postId', async (req, res) => {
