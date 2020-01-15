@@ -1,8 +1,21 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom'
-import styles from './auth.module.css'
+import styles from './login.module.css'
+import { NavLink } from 'react-router-dom'
+// import { Redirect } from 'react-router-dom'
+// import { connect } from 'react-redux'
+// import { login } from "../../redux/actions/login-actions";
+// import {Field, reduxForm} from 'redux-form'
+import {LoginAPI} from '../../API/api'
 
-const Auth = props => {
+const Login = props => {
+    // const onSubmit = (formData) => {
+    //     login(formData.email, formData.password)
+
+    //     if (isAuth) {
+    //         return <Redirect to={'/profile'} />
+    //     }
+    // }
+    LoginAPI.login()
     return (
         <div className={styles.login}>
             <h1>ЛИЧНЫЙ КАБИНЕТ</h1>
@@ -22,5 +35,10 @@ const Auth = props => {
     )
 }
 
+// const mapStateToProps = (state) => ({
+//     isAuth: state.auth.isAuth
+// })
 
-export default Auth
+// export default connect(mapStateToProps, { login })(Login)
+
+export default Login
