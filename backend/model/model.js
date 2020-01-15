@@ -25,6 +25,10 @@ const ItemSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
+    images: {
+        type: Array,
+        require: true
+    }
 })
 
 module.exports = mongoose.model('Item', ItemSchema)
