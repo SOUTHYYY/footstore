@@ -4,7 +4,7 @@ import styles from './item-card.module.css'
 const ItemCard = ({ post }) => {
     const { name, brand, color, images, starting_price, description } = post
 
-    const desc = description.length === 0 ?
+    const desc = description === undefined || description.length === 0 ?
         null :
         (<div className={styles.item__description}>
             <h1>Описание</h1>
@@ -21,8 +21,12 @@ const ItemCard = ({ post }) => {
                         <div className={styles.header__info_container}>
                             <div className={styles.brand}>{brand} </div>
                             <div className={styles.model}>{name}</div>
-                            <div className={styles.color}>{color}</div>
+                            <div className={styles.color}>{`'${color}'`}</div>
                             <button className={styles.btn}> Купить от {starting_price} Р</button>
+                        </div>
+                        <div className={styles.header__info_button}>
+                            <button>Купить</button>
+                            <button>Сделать Ставку</button>
                         </div>
                     </div>
                 </div>
@@ -48,13 +52,20 @@ const ItemCard = ({ post }) => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.item__footer_values}>
-                        <h1>1231231</h1>
+                    <div className={styles.item__footer_values_container}>
+                        <div className={styles.item__footer_values}>
+                            <div className={styles.model__table_lable}>ДОСТАВКА И ВОЗВРАТ</div>
+                            <div className={styles.model__table_lable}>ОПЛАТА</div>
+                            <div className={styles.model__table_lable}>ПРАВИЛА ПРОДАЖИ</div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
     )
 }
+
+
 
 export default ItemCard
