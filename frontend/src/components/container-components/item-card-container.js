@@ -19,22 +19,23 @@ class ItemCardContainer extends React.Component {
     }
 
     render() {
-        if (this.state.error) {
-            return (
-                <div className={styles.preloader}>
-                    Упс... что-то пошло не так...
-                </div>
-            )
-        }
-        if (this.props.loading) {
+        const { error, data, loading } = this.props
+        if (loading) {
             return (
                 <div className={styles.preloader}>
                     <Preloader />
                 </div>
             )
         }
+        if (error) {
+            return (
+                <div className={styles.preloader}>
+                    Упс... что-то пошло не так...
+                </div>
+            )
+        }
         return (
-            <ItemCard post={this.props.data} />
+            <ItemCard post={data} />
         )
     }
 }
