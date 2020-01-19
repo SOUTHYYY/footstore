@@ -1,0 +1,40 @@
+.banner {
+  padding: 70px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.banner__title {
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.buttons a {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  max-width: 200px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 17px 0 15px;
+  background-color: #0abab5;
+  font-size: 11px;
+  color: #fff;
+  letter-spacing: 0.33px;
+  border-radius: 3px;
+  cursor: pointer;
+}
