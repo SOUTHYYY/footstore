@@ -8,7 +8,8 @@ const registerValidation = (data) => {
         email: Joi.string().email().required(),
         password: Joi.string().required().min(6),
         phone: Joi.string().required(),
-        city: Joi.string().required()
+        city: Joi.string().required(),
+        category: Joi.string().required()
     })
     return schema.validate(data)
 }

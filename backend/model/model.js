@@ -28,6 +28,10 @@ const ItemSchema = mongoose.Schema({
     images: {
         type: Array,
         require: true
+    },
+    category: {
+        type: String,
+        require: true
     }
 })
 
