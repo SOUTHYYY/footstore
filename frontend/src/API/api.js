@@ -27,6 +27,12 @@ export const PostsAPI = {
             .then(response => {
                 return response.data
             })
+    },
+    getSotredPosts(sort) {
+        return instance.get(`/posts/category/${sort}`)
+        .then(response => {
+            return response.data
+        })
     }
 }
 export const LoginAPI = {
