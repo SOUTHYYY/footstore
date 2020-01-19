@@ -7,7 +7,7 @@ import Profile from './components/profile/profile'
 import Login from './components/login/login';
 import Home from './components/home/home'
 import ItemCardContainer from './components/container-components/item-card-container'
-import Catalog from './components/catalog/catalog';
+import CatalogContainer from './components/container-components/catalog-container';
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
           <Route path='/home' component={Home} />
           <Route path='/profile' component={Profile} />
           <Route path='/login' component={Login} />
-          <Route path='/catalog' component={Catalog} />
+          <Route path='/catalog' component={CatalogContainer} />
           <Route path='/item/:id'
             render={({ match }) => {
               const { id } = match.params
