@@ -3,11 +3,11 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom'
 import Header from './components/header/header'
 import Footer from '../src/components/footer/footer'
-import SimpleSlider from './components/carousel/carousel';
-import Item from './components/item/item';
-import ItemList from './components/items/item-list';
 import Profile from './components/profile/profile'
-import Auth from './components/auth/auth';
+import Login from './components/login/login';
+import Home from './components/home/home'
+import ItemCardContainer from './components/container-components/item-card-container'
+import Catalog from './components/catalog/catalog';
 
 const App = () => {
   return (
@@ -15,9 +15,15 @@ const App = () => {
       <Header />
       <div className='content'>
         <Switch>
-          <Route path='/home' component={ItemList} />
+          <Route path='/home' component={Home} />
           <Route path='/profile' component={Profile} />
-          <Route path='/login' component={Auth} />
+          <Route path='/login' component={Login} />
+          <Route path='/catalog' component={Catalog} />
+          <Route path='/item/:id'
+            render={({ match }) => {
+              const { id } = match.params
+              return <ItemCardContainer id={id} />
+            }} />
         </Switch>
       </div>
       <Footer />
