@@ -11,6 +11,7 @@ a {
     align-items: flex-start;
     justify-content: center;
     transition: 0.5s;
+    text-transform: uppercase;
 }
 /* .item:hover{
     border: 5px solid lightgray;
