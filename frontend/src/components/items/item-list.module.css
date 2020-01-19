@@ -44,3 +44,10 @@
   width: 100%;
   display: flex;
 }
+
+.preloader {
+  display: flex;
+  min-height: 444px;
+  align-items: center;
+  justify-content: center;
+}

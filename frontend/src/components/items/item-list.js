@@ -3,30 +3,13 @@ import styles from './item-list.module.css'
 import Item from '../item/item';
 
 
+
 const ItemList = props => {
-    const data = [
-        {
-            image: 'https://ns.imgix.net/product/1577762871902_azael.jpeg?fit=fill&bg=FFFFFF&trim=color&auto=format,compress&q=90',
-            brand: 'Adidas',
-            model: 'YEZZY 700 V3',
-            color: 'AZAEL',
-            price: '45000'
-        },
-        {
-            image: 'https://api.outofstock.cc/media/537415_01.jpg.jpeg',
-            brand: 'NIKE X OFF-WHITE',
-            model: 'DUNK LOW',
-            color: 'PINE GREEN',
-            price: '40000'
-        },
-        {
-            image: 'https://api.outofstock.cc/media/1_jGW0xRc.jpeg',
-            brand: 'Adidas',
-            model: 'YEEZY 500 HIGH SLATE',
-            color: 'SLATE',
-            price: '20000'
-        },
-    ]
+
+    const postsList = props.posts.map(item => {
+        return <Item key={item.color} post={item} />
+    })
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper__wrapper}>
@@ -39,14 +22,13 @@ const ItemList = props => {
                     </div>
                 </div>
                 <div className={styles.wrapper__list}>
-                    {data.map(item => (
-                        <Item key={item.model} data={item} />
-                    ))}
+                    {postsList}
                 </div>
             </div>
 
         </div>
     )
 }
+
 
 export default ItemList
