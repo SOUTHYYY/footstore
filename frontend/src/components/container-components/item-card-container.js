@@ -7,11 +7,25 @@ import ItemCard from '../item-card/item-card';
 
 
 class ItemCardContainer extends React.Component {
+    state = {
+        error: false
+    }
     componentDidMount() {
         this.props.requestCurrentPost(this.props.id)
     }
 
+    componentDidCatch() {
+        this.setState({ error: true })
+    }
+
     render() {
+        if (this.state.error) {
+            return (
+                <div className={styles.preloader}>
+                    Упс... что-то пошло не так...
+                </div>
+            )
+        }
         if (this.props.loading) {
             return (
                 <div className={styles.preloader}>

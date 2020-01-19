@@ -57,8 +57,8 @@
 }
 .header__info_button button {
   flex: 1;
-  border: none;
   border-top: 1px solid #e5e5e5;
+  background-color: #fff;
 }
 .header__info_button button:first-child {
   border-right: 1px solid #e5e5e5;
@@ -94,8 +94,10 @@
   background-color: #0abab5;
   font-size: 11px;
   color: #fff;
+  border: none;
   letter-spacing: 0.33px;
   border-radius: 3px;
+  outline: none;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
