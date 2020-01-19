@@ -1,27 +1,22 @@
-
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 .item {
-    width: 412px;
-    display: flex;
-    flex-direction: column;
-    border-left: 2px solid lightgray;
-    align-items: flex-start;
-    justify-content: center;
-    transition: 0.5s;
-    text-transform: uppercase;
+  width: 100%;
+  max-width: 412px;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid lightgray;
+  align-items: flex-start;
+  justify-content: center;
+  transition: 0.5s;
+  text-transform: uppercase;
 }
-/* .item:hover{
-    border: 5px solid lightgray;
-    transition: 0.5s;
-} */
-/* TODO:  сделать нормальный эффект при наведении */
 
 .item__container {
-    width: 70%;
-    margin: 2% 0 0 10%;
+  width: 70%;
+  margin: 2% 0 0 10%;
 }
 
 .item__image {
@@ -32,14 +27,14 @@ a {
 }
 
 .item__image img {
-  width: 278px;
-  height: 131px;
+  max-height: 20vh;
+  max-width: 100%;
 }
 
 .item__desc {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .item__desc_brand {
@@ -68,9 +63,9 @@ a {
   text-transform: uppercase;
 }
 
-.item__desc_price{
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 12px;
-    letter-spacing: .48px;
+.item__desc_price {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  letter-spacing: 0.48px;
 }
