@@ -1,4 +1,3 @@
-import React from 'react'
 export const filterItems = {
     brands: ['Acronym', 'Adidas', 'Clot', 'Comme des Garçons', 'Converse', 'Eric Koston', 'Fear Of God', 'Maison Chateau Rouge',
         'Missing Link', 'Nike', 'Off-White', 'Parra', 'Patta', 'Pharrell', 'Sacai', 'Sean Wotherspoon', 'Serena Williams', 'Supreme',
@@ -66,5 +65,14 @@ export const filterItems = {
         'Zoom Fly Mercurial Flyknit',
         'Zoom Fly SP',
         'ZX 4000 Futurecraft 4D Carbon',],
-    sizes: []
+    sizes: [
+        '3', '4', '4.5',
+        '5', '5.5', '6',
+        '6.5', '7', '7.5',
+        '8', '8.5', '9',
+        '9.5', '10', '10.5',
+        '11', '11.5', '12',
+        '12.5', '13', '13.5', '14',
+        '16'
+    ]
 }
