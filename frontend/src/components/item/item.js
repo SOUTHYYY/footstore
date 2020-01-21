@@ -7,19 +7,16 @@ const Item = ({ post }) => {
 
     return (
         <NavLink to={`/item/${_id}`} className={styles.item}>
-            <div className={styles.item__container}>
-                <div className={styles.item__image}>
-                    <img src={images[0]} alt='item'></img>
+            <div className={styles.item__image}>
+                <img src={images[0]} alt='item'></img>
+            </div>
+            <div className={styles.item__desc}>
+                <div>
+                    <div className={styles.item__desc_brand}>{brand}</div>
+                    <div className={styles.item__desc_model}>{name}</div>
+                    <div className={styles.item__desc_color}>{color}</div>
                 </div>
-                <div className={styles.item__desc}>
-                    <div>
-                        <div className={styles.item__desc_brand}>{brand}</div>
-                        <div className={styles.item__desc_model}>{name}</div>
-                        <div className={styles.item__desc_color}>{color}</div>
-                    </div>
-                    <div className={styles.item__desc_price}>{starting_price} ₽</div>
-
-                </div>
+                <div className={styles.item__desc_price}>{starting_price} ₽</div>
             </div>
         </NavLink>
     )
