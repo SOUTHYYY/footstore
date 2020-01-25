@@ -1,0 +1,86 @@
+.profile_settings {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.profile_settings h1 {
+  margin: 100px 0;
+}
+.profile_settings__content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.content__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.content__row_item {
+  width: 46%;
+}
+
+.content__row_item div {
+  font-size: 11px;
+  color: #000;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.content__row_item input[type="text"] {
+  width: calc(100% - 16px);
+  border: 1px solid #e5e5e5 !important;
+  outline: none;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.setting__button {
+  text-transform: uppercase;
+  width: 100vw;
+  padding: 25px 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.buttons button {
+  width: 100%;
+  margin-top: 20px !important;
+  max-width: 600px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 17px 0 15px;
+  letter-spacing: 0.33px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn {
+  background-color: #0abab5;
+  font-size: 11px;
+  color: #fff;
+}
+
+.btn_gray {
+  background-color: #e5e5e5;
+  color: #000;
+}
