@@ -1,4 +1,4 @@
-import { SET_POSTS, SET_LOADING, SET_TOTAL_COUNT, SET_FILTER } from '../consts/catalog-consts'
+import { SET_CATALOG_POSTS, SET_CATALOG_LOADING, SET_TOTAL_COUNT, SET_FILTER, SORT_BY_LOW_PRICE } from '../consts/catalog-consts'
 
 const initialState = {
     posts: [],
@@ -12,14 +12,31 @@ const initialState = {
     ]
 }
 
+const sortPosts = (posts) => {
+    const newArr = [...posts]
+    newArr.sort((a, b) => {
+        return a.starting_price - b.starting_price;
+    });
+    return newArr
+}
+
+// Противополоджная сортировка массива как выше
+// const sortArr = (posts) => {
+//     const newArr = [...posts]
+//     newArr.sort((a, b) => {
+//         return b.starting_price - a.starting_price;
+//     });
+//     return newArr
+// }
+
 const CatalogReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_POSTS:
+        case SET_CATALOG_POSTS:
             return {
                 ...state,
-                post: action.payload
+                posts: action.payload
             }
-        case SET_LOADING:
+        case SET_CATALOG_LOADING:
             return {
                 ...state,
                 loading: action.payload
@@ -33,6 +50,11 @@ const CatalogReducer = (state = initialState, action) => {
             return {
                 ...state,
                 filter: action.payload
+            }
+        case SORT_BY_LOW_PRICE:
+            return {
+                ...state,
+                posts: sortPosts(state.posts)
             }
         default:
             return state

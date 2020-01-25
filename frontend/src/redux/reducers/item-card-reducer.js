@@ -1,18 +1,19 @@
-import { SET_POST, SET_LOADING } from '../consts/item-card-consts'
+import { SET_CARD_POST, SET_CARD_LOADING } from '../consts/item-card-consts'
 
 const initialState = {
-    post: [],
-    loading: true
+    post: null,
+    loading: true,
 }
 
 const ItemCardReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_POST:
+        case SET_CARD_POST:
             return {
                 ...state,
-                post: action.payload
+                post: action.payload,
+                loading: false
             }
-        case SET_LOADING: 
+        case SET_CARD_LOADING:
             return {
                 ...state,
                 loading: action.payload
