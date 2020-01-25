@@ -1,6 +1,7 @@
-import React from 'react';
 import styles from './profile.module.css'
+import React from 'react';
 import settings from '../../images/settings-images/settings.svg'
+import { NavLink } from 'react-router-dom';
 
 const Profile = props => {
 
@@ -24,10 +25,12 @@ const Profile = props => {
                 <div className={styles.profile__progress}>
 
                 </div>
-                <div className={styles.settings}>
-                    <img src={settings} alt='settings'></img>
-                    <div>Настройки</div>
-                </div>
+                <NavLink to='profile/settings'>
+                    <div className={styles.settings}>
+                        <img src={settings} alt='settings'></img>
+                        <div>Настройки</div>
+                    </div>
+                </NavLink>
             </div>
             <div className={styles.profile__main}>
                 <div className={styles.profile__main_header}>
