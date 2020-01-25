@@ -4,14 +4,18 @@ import { connect } from 'react-redux'
 import Preloader from '../common/preloader'
 import styles from '../item-card/item-card.module.css'
 import ItemCard from '../item-card/item-card';
+import ErrorIndicator from '../error-indicator/error-indicator';
 
 
 class ItemCardContainer extends React.Component {
     state = {
-        error: false
+        error: true
     }
-    componentDidMount() {
-        this.props.requestCurrentPost(this.props.id)
+    componentWillMount() {
+        console.log('props', this.props)
+        const { id, requestCurrentPost } = this.props
+        requestCurrentPost(id)
+
     }
 
     componentDidCatch() {
@@ -19,7 +23,9 @@ class ItemCardContainer extends React.Component {
     }
 
     render() {
-        const { error, data, loading } = this.props
+        const { data, loading } = this.props
+        console.log('LOADING', loading)
+        const { error } = this.state
         if (loading) {
             return (
                 <div className={styles.preloader}>
@@ -30,13 +36,11 @@ class ItemCardContainer extends React.Component {
         if (error) {
             return (
                 <div className={styles.preloader}>
-                    Упс... что-то пошло не так...
+                    <ErrorIndicator />
                 </div>
             )
         }
-        return (
-            <ItemCard post={data} />
-        )
+        return <ItemCard post={data} />
     }
 }
 

@@ -4,23 +4,32 @@ import { connect } from 'react-redux'
 import ItemList from '../items/item-list';
 import Preloader from '../common/preloader'
 import styles from '../items/item-list.module.css'
+import ErrorIndicator from '../error-indicator/error-indicator';
 
 
 class ItemListContainer extends React.Component {
+    state = {
+        error: false
+    }
     componentDidMount() {
         this.props.requestPosts()
     }
+    componentDidCatch() {
+        this.setState({ error: true })
+    }
 
     render() {
-        if (this.props.loading) {
-            return (
-                <div className={styles.preloader}>
-                    <Preloader />
-                </div>
-            )
+        const { loading } = this.props
+        const { error } = this.state
+        if (loading) {
+            return <div className={styles.preloader}><Preloader /></div>
         }
+        if (error) {
+            return <div className={styles.preloader}><ErrorIndicator /></div>
+        }
+        const posts = this.props.data.slice(0, 4)
         return (
-            <ItemList posts={this.props.data} />
+            <ItemList posts={posts} />
         )
     }
 }
