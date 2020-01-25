@@ -8,7 +8,7 @@ import ErrorIndicator from '../error-indicator/error-indicator'
 
 class CatalogContainer extends Component {
     state = {
-        error: true
+        error: false
     }
     componentWillMount() {
         this.props.requestSortedPosts('Sneakers')
@@ -18,7 +18,7 @@ class CatalogContainer extends Component {
     }
     render() {
         const { data, loading, totalCount, requestSortedPosts, filter, filterButtons, sort } = this.props
-        const error = this.state
+        const {error} = this.state
         if (loading) {
             return <div className={styles.preloader}><Preloader /></div>
         }

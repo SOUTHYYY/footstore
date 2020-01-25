@@ -9,7 +9,7 @@ import ErrorIndicator from '../error-indicator/error-indicator';
 
 class ItemCardContainer extends React.Component {
     state = {
-        error: true
+        error: false
     }
     componentWillMount() {
         console.log('props', this.props)
@@ -24,7 +24,6 @@ class ItemCardContainer extends React.Component {
 
     render() {
         const { data, loading } = this.props
-        console.log('LOADING', loading)
         const { error } = this.state
         if (loading) {
             return (
