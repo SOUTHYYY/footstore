@@ -8,6 +8,7 @@ import Login from './components/login/login';
 import Home from './components/home/home'
 import ItemCardContainer from './components/container-components/item-card-container'
 import CatalogContainer from './components/container-components/catalog-container';
+import ProfileSettings from './components/profile-settings/profile-settings'
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
       <div className='content'>
         <Switch>
           <Route path='/home' component={Home} />
-          <Route path='/profile' component={Profile} />
+          <Route exact path='/profile' component={Profile} />
+          <Route path='/profile/settings' component={ProfileSettings} />
           <Route path='/login' component={Login} />
           <Route path='/catalog' component={CatalogContainer} />
           <Route path='/item/:id'
