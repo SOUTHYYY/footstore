@@ -130,20 +130,37 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  position: relative;
 }
 
-.filter__scrollview_row 
-input[type='checkbox']:checked, 
-input[type='checkbox']:not(:checked) {
-  width: 13px;
-  height: 13px;
-  border: 2px solid #e1e1e1;
+.filter__scrollview_row input[type="checkbox"] {
+  display: none;
 }
 
-.filter__scrollview_row span {
+.filter__scrollview_row label {
   color: #000;
   letter-spacing: 0.75px;
   margin-left: 15px;
+  padding-left: 20px;
+}
+.filter__scrollview_row label::before {
+  content: "";
+  width: 13px;
+  position: absolute;
+  left: 0;
+  height: 13px;
+  border-radius: 2px;
+  border: 1px solid #e1e1e1;
+}
+
+.filter__scrollview_row input[type="checkbox"]:checked + label::before {
+  border: none;
+  width: 15px !important;
+  left: 0 !important;
+  height: 15px !important;
+  border-radius: 2px !important;
+  background-color: #0abab5 !important;
+  top: 0;
 }
 
 .filter__scrollview::-webkit-scrollbar-thumb {

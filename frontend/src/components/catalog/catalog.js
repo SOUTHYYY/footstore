@@ -33,8 +33,8 @@ const Catalog = ({ data, requestSortedPosts, totalCount, filter, filterButtons, 
             {filterItems.brands.map(item => {
                 return (
                     <div key={item} className={styles.filter__scrollview_row}>
-                        <input type="checkbox" />
-                        <span>{item}</span>
+                        <input type="checkbox" id={item} name='brands' />
+                        <label htmlFor={item}>{item}</label>
                     </div>
                 )
             })}
@@ -46,8 +46,8 @@ const Catalog = ({ data, requestSortedPosts, totalCount, filter, filterButtons, 
             {filterItems.sizes.map(item => {
                 return (
                     <div key={item} className={styles.filter__scrollview_row}>
-                        <input type="checkbox" />
-                        <span>US {item}</span>
+                        <input type="checkbox" id={item} name='sizes' />
+                        <label htmlFor={item}>US {item}</label>
                     </div>
                 )
             })}
@@ -59,8 +59,8 @@ const Catalog = ({ data, requestSortedPosts, totalCount, filter, filterButtons, 
             {filterItems.models.map(item => {
                 return (
                     <div key={item} className={styles.filter__scrollview_row}>
-                        <input type="checkbox" />
-                        <span>{item}</span>
+                        <input type="checkbox" id={item} name='models' />
+                        <label htmlFor={item}>{item}</label>
                     </div>
                 )
             })}
